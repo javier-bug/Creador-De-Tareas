@@ -1,29 +1,78 @@
 .container {
   display: flex;
   flex-direction: column;
-  border: solid red;
+  border: groove #04D2FB;
   border-radius: 10px;
-  width: 50vh; 
-  padding: 10px 0px;
-  min-height: 80vh;
+  width: 50%; /*cambiar luego*/
+  padding: 0.1rem 0px;
+  min-height: 40rem;
   margin: 40px auto;
+  background-color: rgba(139,234,253,0.5);
+}
+/* Movil */
+@media(min-width: 576px) and (max-width: 767px){
+  .container{
+    width: 70%;
+  }
 }
 
-.titulo{
-    border-bottom: solid red;
-    text-align: center;
+/* Desktop */
+@media(min-width: 992px){
+  .container{
+   width: 400px;
+  }
 }
+
+
+.titulo{
+    border-bottom: groove  #04D2FB;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: small;
+}
+
+/*---- Diseño Boton Nueva Tarea -------*/
+
 
 .nueva_tarea{
   margin: 5px;
-  border: 2px solid #696969;
+  border: 3px solid #3175FC; 
   border-radius: 10px;
-  background-image: linear-gradient(180deg,#EBE8E8,#E0DCDC,#CCC6C6);
+  background-image: linear-gradient(135deg,rgba(230, 250, 255, 1) 38%, rgba(230, 255, 246, 1) 100%);
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  font-size: small;
+  cursor: pointer;
+  transition-duration: 1s;
+  transition-property: all 2s;
+}
+
+.nueva_tarea:hover{
+  box-shadow: 0 8px 25px rgba(0,0,0,0.30);
+  transform: translateY(-4px);
+  background-image: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  
+}
+
+@keyframes ex{
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 0%; }
+}
+
+.nueva_tarea:hover{
+  box-shadow: 0 8px 25px rgba(0,0,0,0.30);
+  transform: translateY(-4px);
+  animation-name: ex;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: reverse;
+  background-image: linear-gradient(135deg, #d53369 0%, #daae51 25%, #d53369 50%, #daae51 75%, #d53369 100%);
+  background-size: 200% 100%;
+  
 }
 
 .icon_plus{
@@ -32,6 +81,21 @@
   width: 25px;
   height: 25px;
 }
+/* ------------------------------------------- */
+
+/*Diseño Tarea*/
+/*.tarea{
+  margin: 5px;
+  border: 2px solid #04D2FB;
+  border-radius: 10px;
+  background-color: #B9FEE7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: small;
+}*/
+
 
 
 
